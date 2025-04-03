@@ -13,7 +13,7 @@ async function getSalesData() {
          numberOfSales: data._count
      }
  }
-
+//in the video 31:00
 
  
 
@@ -26,8 +26,8 @@ export default async function AdminDashboard() {
       body={formatCurrency(salesData.amount)} />
       <DashboardCard
       title="Customers" 
-      subtitle={`${formatCurrency} Average Value`}
-      body={formatNumber()}
+      subtitle={`${formatNumber(salesData.numberOfSales)} Average Value`}
+      body={formatCurrency(salesData.amount)}
        />
 
     </div>
